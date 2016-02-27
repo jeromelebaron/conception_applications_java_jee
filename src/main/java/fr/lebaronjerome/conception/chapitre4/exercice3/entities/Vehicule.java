@@ -1,7 +1,7 @@
 /**
  * 
  */
-package fr.lebaronjerome.conception.chapitre4.exercice3;
+package fr.lebaronjerome.conception.chapitre4.exercice3.entities;
 
 /**
  * @author Jerome
@@ -15,12 +15,19 @@ public abstract class Vehicule {
 
 	private double longueur = 0;
 
+	
+	
+	/**
+	 * 
+	 */
+	public Vehicule() {
+	}
+
 	/**
 	 * @param paramVitesse
 	 * @param paramVitesseMax
 	 */
 	public Vehicule(double paramLongueur, double paramVitesseMax) {
-		super();
 		longueur = paramLongueur;
 		vitesseMax = paramVitesseMax;
 	}
