@@ -15,8 +15,6 @@ public abstract class Vehicule {
 
 	private double longueur = 0;
 
-	
-	
 	/**
 	 * 
 	 */
@@ -33,11 +31,17 @@ public abstract class Vehicule {
 	}
 
 	public void accelerer(double paramDeltaV) {
-
+		if (vitesse + paramDeltaV < 0) {
+			vitesse = 0;
+		} else if (vitesse + paramDeltaV > vitesseMax) {
+			vitesse = vitesseMax;
+		} else {
+			vitesse += paramDeltaV;
+		}
 	}
 
 	public void decelerer(double paramDeltaV) {
-
+		accelerer(-paramDeltaV);
 	}
 
 	/**
@@ -61,7 +65,8 @@ public abstract class Vehicule {
 	 */
 	@Override
 	public String toString() {
-		return "Vehicule [vitesse=" + vitesse + ", vitesseMax=" + vitesseMax + ", longueur=" + longueur + "]";
+		return "Vehicule " + this.getClass().getSimpleName() + " [vitesse=" + vitesse + ", vitesseMax=" + vitesseMax
+				+ ", longueur=" + longueur + "]";
 	}
 
 }

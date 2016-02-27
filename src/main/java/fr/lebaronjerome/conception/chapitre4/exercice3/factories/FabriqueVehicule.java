@@ -3,6 +3,8 @@
  */
 package fr.lebaronjerome.conception.chapitre4.exercice3.factories;
 
+import fr.lebaronjerome.conception.chapitre4.exercice3.entities.Vehicule;
+
 /**
  * @author Jerome
  *
@@ -16,6 +18,8 @@ public abstract class FabriqueVehicule {
 	protected double probaPieton = 10;
 
 	protected double probaBicyclette = 5;
+
+	public abstract Vehicule creerVehicule();
 
 	/**
 	 * 
