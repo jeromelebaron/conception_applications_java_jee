@@ -19,9 +19,19 @@ public class ProxyRepertoire implements IRepertoire {
 	 */
 	@Override
 	public void lister() {
-		if (System.getProperty("user.name") == repertoire.getProprietaire()) {
+		if (System.getProperty("user.name") .equals(repertoire.getProprietaire())) {
 			repertoire.lister();
+		} else {
+			System.err.println("Accès refusé");
 		}
+	}
+
+	/**
+	 * @param paramRepertoire
+	 */
+	public ProxyRepertoire(Repertoire paramRepertoire) {
+		super();
+		repertoire = paramRepertoire;
 	}
 
 	/**
