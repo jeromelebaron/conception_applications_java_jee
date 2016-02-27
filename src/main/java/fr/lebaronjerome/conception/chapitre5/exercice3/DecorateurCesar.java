@@ -1,6 +1,7 @@
 package fr.lebaronjerome.conception.chapitre5.exercice3;
 
 
+import java.io.IOException;
 import java.io.OutputStream;
 
 /**
@@ -17,20 +18,21 @@ public class DecorateurCesar {
     /**
      * 
      */
-    private Cesar cesar;
+    private OutputStream outputStream;
 
     /**
      * @param paramOutputStream
      */
-    public void DecorateurCesar(OutputStream paramOutputStream) {
-        // TODO implement here
+    public DecorateurCesar(OutputStream paramOutputStream) {
     }
 
     /**
+     * @throws IOException 
      * 
      */
-    public void encoderFlux() {
-        // TODO implement here
+    public void encoderFlux(char paramCaractere, int paramDecalage) throws IOException {
+    	int aEcrire = Cesar.code(paramCaractere, paramDecalage);
+    	outputStream.write(aEcrire);
     }
 
 }
