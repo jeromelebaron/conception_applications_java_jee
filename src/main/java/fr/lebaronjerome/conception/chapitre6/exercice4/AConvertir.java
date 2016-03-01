@@ -3,15 +3,11 @@
  */
 package fr.lebaronjerome.conception.chapitre6.exercice4;
 
-import java.util.Observable;
-
 /**
  * @author Jerome
  *
  */
-public class AConvertir extends Observable {
-
-	private int entierAConvertir;
+public class AConvertir extends AbsctractAConvertir {
 
 	/**
 	 * Accessesseur en lecture du champs <code>entierAConvertir</code>
@@ -28,10 +24,11 @@ public class AConvertir extends Observable {
 	 * @param paramEntierAConvertir
 	 *            le champs entierAConvertir à peupler
 	 */
+	@Override
 	public void setEntierAConvertir(int paramEntierAConvertir) {
 		entierAConvertir = paramEntierAConvertir;
 		setChanged();
 		notifyObservers();
 	}
-	
+
 }

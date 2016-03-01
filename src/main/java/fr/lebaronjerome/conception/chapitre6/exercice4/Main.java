@@ -16,7 +16,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		
-		AConvertir aConvertir = new AConvertir();
+		AbsctractAConvertir aConvertir = new AConvertir();
 		ConvertisseurHexadecimal convHexa = new ConvertisseurHexadecimal();
 		aConvertir.addObserver(convHexa);
 		ConvertisseurBinaire convBinaire = new ConvertisseurBinaire();
