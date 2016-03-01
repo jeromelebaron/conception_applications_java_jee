@@ -15,6 +15,8 @@ public abstract class Parcours implements Iterator<Integer>{
 	
 	private int ligneCourante;
 	
+	protected TableauEntier tableauEntier;
+	
 	public abstract void suivant();
 	
 	/* (non-Javadoc)
@@ -22,7 +24,7 @@ public abstract class Parcours implements Iterator<Integer>{
 	 */
 	@Override
 	public boolean hasNext() {
-		return false;
+		return colonneCourante < tableauEntier.getTableauEntier().length;
 	}
 
 	/* (non-Javadoc)
@@ -30,6 +32,24 @@ public abstract class Parcours implements Iterator<Integer>{
 	 */
 	@Override
 	public Integer next() {
-		return null;
+		return tableauEntier.valeurA(ligneCourante, colonneCourante);
 	}
+
+	/**
+	 * Accessesseur en lecture du champs <code>tableauEntier</code>
+	 * @return le champs tableauEntier
+	 */
+	public TableauEntier getTableauEntier() {
+		return tableauEntier;
+	}
+
+	/**
+	 * Accessesseur en écriture du champs <code>tableauEntier</code>
+	 * @param paramTableauEntier le champs tableauEntier à peupler
+	 */
+	public void setTableauEntier(TableauEntier paramTableauEntier) {
+		tableauEntier = paramTableauEntier;
+	}
+	
+	
 }

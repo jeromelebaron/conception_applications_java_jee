@@ -30,6 +30,10 @@ public class TableauEntier {
 		return tableauEntier[0].length;
 	}
 
+	public ParcoursLigne iterateurLigne() {
+		return new ParcoursLigne();
+	}
+
 	/**
 	 * Accessesseur en lecture du champs <code>tableauEntier</code>
 	 * 
