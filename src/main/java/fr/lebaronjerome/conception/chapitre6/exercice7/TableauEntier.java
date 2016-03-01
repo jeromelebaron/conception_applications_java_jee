@@ -31,9 +31,13 @@ public class TableauEntier {
 	}
 
 	public ParcoursLigne iterateurLigne() {
-		return new ParcoursLigne();
+		return new ParcoursLigne(this);
 	}
 
+	public ParcoursZigZag iterateurZigzag(){
+		return new ParcoursZigZag(this);
+	}
+	
 	/**
 	 * Accessesseur en lecture du champs <code>tableauEntier</code>
 	 * 
