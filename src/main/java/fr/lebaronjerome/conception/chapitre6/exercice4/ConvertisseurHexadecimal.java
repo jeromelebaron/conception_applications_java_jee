@@ -25,7 +25,7 @@ public class ConvertisseurHexadecimal implements IConvertisseur, Observer {
 	 */
 	@Override
 	public void update(Observable paramO, Object paramArg) {
-		AConvertir aConvertir = (AConvertir) paramArg;
+		AConvertir aConvertir = (AConvertir) paramO;
 		convertir(aConvertir.getEntierAConvertir());
 	}
 

@@ -3,6 +3,8 @@
  */
 package fr.lebaronjerome.conception.chapitre6.exercice4;
 
+import java.util.Scanner;
+
 /**
  * @author Jerome
  *
@@ -22,7 +24,13 @@ public class Main {
 		ConvertisseurOctal convOctal = new ConvertisseurOctal();
 		aConvertir.addObserver(convOctal);
 		
-		
+		int i = 0;
+		while (i<10) {
+			Scanner scanner = new Scanner(System.in);
+			int entierSaisi = Integer.parseInt(scanner.nextLine());
+			aConvertir.setEntierAConvertir(entierSaisi);
+			i++;
+		}
 
 	}
 

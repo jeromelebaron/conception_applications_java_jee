@@ -30,22 +30,8 @@ public class AConvertir extends Observable {
 	 */
 	public void setEntierAConvertir(int paramEntierAConvertir) {
 		entierAConvertir = paramEntierAConvertir;
-	}
-	
-	/* (non-Javadoc)
-	 * @see java.util.Observable#notifyObservers()
-	 */
-	@Override
-	public void notifyObservers() {
-		super.notifyObservers();
-	}
-
-	/* (non-Javadoc)
-	 * @see java.util.Observable#setChanged()
-	 */
-	@Override
-	protected synchronized void setChanged() {
-		super.setChanged();
+		setChanged();
+		notifyObservers();
 	}
 	
 }
