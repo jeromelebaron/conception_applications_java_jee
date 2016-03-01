@@ -17,6 +17,7 @@ public class Troll extends Personnage {
 	 */
 	@Override
 	public void combattre() {
+		System.out.println("Je suis troll");
 		techniqueCombat.utiliserArme();
 	}
 

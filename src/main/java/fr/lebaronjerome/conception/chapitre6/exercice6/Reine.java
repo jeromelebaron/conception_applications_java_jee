@@ -17,6 +17,7 @@ public class Reine extends Personnage {
 	 */
 	@Override
 	public void combattre() {
+		System.out.println("Je suis reine");
 		techniqueCombat.utiliserArme();
 	}
 

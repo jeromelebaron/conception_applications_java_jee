@@ -17,6 +17,7 @@ public class Roi extends Personnage {
 	 */
 	@Override
 	public void combattre() {
+		System.out.println("Je suis roi");
 		techniqueCombat.utiliserArme();
 	}
 
