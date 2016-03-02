@@ -17,7 +17,7 @@ public abstract class Parcours implements Iterator<Integer> {
 
 	protected TableauEntier tableauEntier;
 
-	public abstract void suivant();
+	public abstract Integer suivant();
 
 	
 	/*
@@ -27,8 +27,7 @@ public abstract class Parcours implements Iterator<Integer> {
 	 */
 	@Override
 	public boolean hasNext() {
-		boolean resultat = ligneCourante < tableauEntier.getTableauEntier().length;
-		return resultat;
+		return colonneCourante < tableauEntier.getTableauEntier()[ligneCourante].length;
 	}
 
 	/*
@@ -38,7 +37,7 @@ public abstract class Parcours implements Iterator<Integer> {
 	 */
 	@Override
 	public Integer next() {
-		return tableauEntier.valeurA(ligneCourante++, colonneCourante);
+		return suivant();
 	}
 
 	/**
