@@ -26,7 +26,6 @@ public class ParcoursZigZag extends Parcours {
 		int[][] tableau = tableauEntier.getTableauEntier();
 		Integer valeur = tableauEntier.valeurA(ligneCourante, colonneCourante);
 		if (ligneCourante % 2 != 0) {
-			colonneCourante = tableau[ligneCourante].length - 1;
 			valeur = tableauEntier.valeurA(ligneCourante, colonneCourante);
 			colonneCourante--;
 			if (colonneCourante == -1) {
@@ -39,7 +38,7 @@ public class ParcoursZigZag extends Parcours {
 				ligneCourante++;
 				colonneCourante = 0;
 			}
-		}
+		}		
 		return valeur;
 	}
 
