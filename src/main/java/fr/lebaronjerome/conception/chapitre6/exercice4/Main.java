@@ -32,6 +32,7 @@ public class Main {
 			i++;
 		}
 
+		System.out.println("Le test est fini !");
 	}
 
 }
