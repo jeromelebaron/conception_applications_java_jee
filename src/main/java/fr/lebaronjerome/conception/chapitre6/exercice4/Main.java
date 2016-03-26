@@ -15,7 +15,7 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
+
 		AbsctractAConvertir aConvertir = new AConvertir();
 		ConvertisseurHexadecimal convHexa = new ConvertisseurHexadecimal();
 		aConvertir.addObserver(convHexa);
@@ -23,16 +23,15 @@ public class Main {
 		aConvertir.addObserver(convBinaire);
 		ConvertisseurOctal convOctal = new ConvertisseurOctal();
 		aConvertir.addObserver(convOctal);
-		
+
 		int i = 0;
-		while (i<10) {
+		while (i < 10) {
 			Scanner scanner = new Scanner(System.in);
 			int entierSaisi = Integer.parseInt(scanner.nextLine());
 			aConvertir.setEntierAConvertir(entierSaisi);
 			i++;
 		}
 
-		System.out.println("Le test est fini !");
 	}
 
 }
